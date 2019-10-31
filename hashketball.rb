@@ -92,7 +92,6 @@ def player_stats(player_name)
 end
 
 def find_max(attribute)
-  #returns highest specified attribute
   attribute_array = []
   game_hash.each do |key, value|
     value[:players].each do |element|
@@ -113,20 +112,19 @@ def most_points_scored
 end
 
 def winning_team
-#returns team with most points scored
   home = game_hash[:home][:players].sum {|el| el[:points]}
   away = game_hash[:away][:players].sum {|el| el[:points]}
   return (home > away) ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
 end
 
 def player_with_longest_name
-#returns player with longest name 
+  find_max(:player_name)
 end
 
 #SUPER BONUS
 
 def long_name_steals_a_ton?
-#returns true is plaayer with the longest name had the most steals 
+#returns true if player with the longest name had the most steals 
 end
 
 
