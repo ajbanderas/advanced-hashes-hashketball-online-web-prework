@@ -91,6 +91,16 @@ def player_stats(player_name)
   end
 end
 
+def find_max(attribute)
+  #returns player_name of player with highest specified attribute
+  attribute_array = []
+  game_hash.each do |key, value|
+    value[:players].each do |element|
+      attribute_array << find_player_value(attribute, element[:player_name])
+    end
+  end
+end
+
 def big_shoe_rebounds
   game_hash.each do |key, value|
     return value[:players].max_by{|e| e[:shoe]}[:rebounds]
