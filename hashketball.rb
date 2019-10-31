@@ -99,6 +99,7 @@ def find_max(attribute)
       attribute_array << find_player_value(attribute, element[:player_name])
     end
   end
+  pp attribute_array
 end
 
 def big_shoe_rebounds
