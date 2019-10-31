@@ -93,7 +93,7 @@ end
 
 def big_shoe_rebounds
   game_hash.each do |key, value|
-    value[:players]
+    return value[:players].max_by{|e| }
   end
 end
 
