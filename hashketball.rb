@@ -91,11 +91,6 @@ def player_stats(player_name)
   end
 end
 
-def find_by_value(lookup,result)
-  #returns attribute looked up with specified attribute
-  
-end
-
 def find_max(attribute)
   #returns highest specified attribute
   attribute_array = []
@@ -104,7 +99,7 @@ def find_max(attribute)
       attribute_array << find_player_value(attribute, element[:player_name])
     end
   end
-  attribute_array
+  max_value = attribute_array.
 end
 
 def big_shoe_rebounds
