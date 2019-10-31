@@ -103,8 +103,7 @@ def find_max(attribute)
 end
 
 def big_shoe_rebounds
-  value = find_max(:shoe)
-  find_player_value(:rebounds, :shoe, value)
+  find_player_value(:rebounds, :shoe, find_max(:shoe))
 end
 
 #BONUS QUESTIONS
