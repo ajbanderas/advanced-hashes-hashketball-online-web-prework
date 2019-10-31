@@ -114,6 +114,7 @@ end
 
 def winning_team
 #returns team with most points scored
+game_hash[:home][:players]
 end
 
 def player_with_longest_name
