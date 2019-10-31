@@ -91,8 +91,12 @@ def player_stats(player_name)
   end
 end
 
+def find_by_value()
+  
+end
+
 def find_max(attribute)
-  #returns player_name of player with highest specified attribute
+  #returns highest specified attribute
   attribute_array = []
   game_hash.each do |key, value|
     value[:players].each do |element|
