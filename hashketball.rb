@@ -70,7 +70,15 @@ def team_names
 end
 
 def player_numbers(team_name)
-#returns array of jersey numbers
+  num_array = []
+  game_hash.each do |key, value|
+    if value[:team_name] == team_name
+      value[:players].each do |element|
+        num_array << element[:number]
+      end
+    end
+  end
+  num_array
 end
 
 def player_stats(player_name)
