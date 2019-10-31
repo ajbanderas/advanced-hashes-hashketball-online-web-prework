@@ -105,15 +105,12 @@ end
 def big_shoe_rebounds
   value = find_max(:shoe)
   find_player_value(:rebounds, :shoe, value)
-#  game_hash.each do |key, value|
- #   return value[:players].max_by{|e| e[:shoe]}[:rebounds]
-  #end
 end
 
 #BONUS QUESTIONS
 
 def most_points_scored
-  pp find_max(:points)
+  find_player_value(:player_name, :points, find_max(:points))
 end
 
 def winning_team
