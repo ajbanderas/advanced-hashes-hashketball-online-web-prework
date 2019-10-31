@@ -118,7 +118,13 @@ def winning_team
 end
 
 def player_with_longest_name
-  pp find_max(:player_name)
+  attribute_array = []
+  game_hash.each do |key, value|
+    value[:players].each do |element|
+      attribute_array << find_player_value(:player_name, :player_name, element[:player_name])
+    end
+  end
+  return max_value = attribute_array.max_by {|e| e.length}
 end
 
 #SUPER BONUS
