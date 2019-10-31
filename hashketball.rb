@@ -92,7 +92,9 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-# returns number of rebounds of player with largest shoe size
+  game_hash.each do |key, value|
+    value[:players]
+  end
 end
 
 #BONUS QUESTIONS
