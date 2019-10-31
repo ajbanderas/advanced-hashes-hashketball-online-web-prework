@@ -37,20 +37,20 @@ def game_hash
   }
 end
 
-def find_player_value(attribute, player_name)
+def find_player_value(attribute, lookup_key, lookup_value)
   game_hash.each do |key, value|
     value[:players].each do |player_hash|
-      return player_hash[attribute] if player_hash[:player_name] == player_name
+      return player_hash[attribute] if player_hash[lookup_key] == lookup_value
     end
   end
 end
 
 def num_points_scored(player_name)
-  find_player_value(:points, player_name)
+  find_player_value(:points, :player_name, player_name)
 end
 
 def shoe_size(player_name)
-  find_player_value(:shoe, player_name)
+  find_player_value(:shoe, :player_name, player_name)
 end
 
 def team_colors(team_name)
@@ -91,7 +91,8 @@ def player_stats(player_name)
   end
 end
 
-def find_by_value()
+def find_by_value(lookup,result)
+  #returns attribute looked up with specified attribute
   
 end
 
