@@ -104,7 +104,7 @@ end
 
 def big_shoe_rebounds
   value = find_max(:shoe)
-  pp value
+  find_player_value(:rebounds, :shoe, value)
 #  game_hash.each do |key, value|
  #   return value[:players].max_by{|e| e[:shoe]}[:rebounds]
   #end
