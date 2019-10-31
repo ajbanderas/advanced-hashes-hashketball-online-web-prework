@@ -130,7 +130,8 @@ end
 #SUPER BONUS
 
 def long_name_steals_a_ton?
-#returns true if player with the longest name had the most steals 
+  name = player_with_longest_name
+  most_steals = find_max(:steals)
 end
 
 
