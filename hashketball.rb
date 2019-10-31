@@ -86,6 +86,7 @@ def player_stats(player_name)
     value[:players].each do |element|
       if element[:player_name] == player_name
         return element.reject { |k,v| v == player_name}
+      end
     end
   end
 end
