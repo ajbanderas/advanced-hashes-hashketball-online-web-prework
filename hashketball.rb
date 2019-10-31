@@ -99,13 +99,14 @@ def find_max(attribute)
       attribute_array << find_player_value(attribute, element[:player_name])
     end
   end
-  max_value = attribute_array.
+  max_value = attribute_array.max
 end
 
 def big_shoe_rebounds
-  game_hash.each do |key, value|
-    return value[:players].max_by{|e| e[:shoe]}[:rebounds]
-  end
+  find_max(:shoe)
+#  game_hash.each do |key, value|
+ #   return value[:players].max_by{|e| e[:shoe]}[:rebounds]
+  #end
 end
 
 #BONUS QUESTIONS
